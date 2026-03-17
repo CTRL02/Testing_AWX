@@ -4,7 +4,7 @@
 
   tasks:
     - name: Run ps aux
-      command: ps aux
+      command: /usr/bin/ps aux
       register: ps_output
 
     - name: Show output
