@@ -1,0 +1,12 @@
+- name: PS aux test
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Run ps aux
+      command: ps aux
+      register: ps_output
+
+    - name: Show output
+      debug:
+        var: ps_output.stdout_lines
